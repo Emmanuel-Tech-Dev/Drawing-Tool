@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing On Canvas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href=' https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css'>
+
+</head>
+
+
+
+<body>
+    <div class="wrapper">
+    <div class="container">
+        <!-- The model for line join  -->
+        <div class="model" id="model">
+
+            <ul class="model-nav">
+
+                <li data-set="miter"> <i class="fa fa-square"></i>Miter</li>
+                <li data-set="round"> <i class="fa fa-circle"></i>Round</li>
+                <li data-set="bevel"> <i class="fa fab fa-bitbucket"></i>Bevel</li>
+
+            </ul>
+
+        </div>
+
+        <!-- The model for line join ends  -->
+
+        <!-- The model for line Cap   -->
+
+        <div class="model" id="model-2">
+
+            <ul class="model-nav">
+
+                <li data-set="sqaure"> <i class="fa fa-square"></i>Square</li>
+                <li data-set="round"> <i class="fa fa-circle"></i>Round</li>
+                <li data-set="butt"> <i class="fa fab fa-bitbucket"></i>Butt</li>
+
+            </ul>
+
+        </div>
+
+        <!-- The model for line Cap ends  -->
+
+        <!-- The model for GCO  -->
+
+        <div class="model" id="model-3">
+
+            <ul class="model-nav">
+
+                <li data-set="source-over"><i class="fa fab fa-bitbucket"></i></i>source-over</li>
+                <li data-set="source-in"> <i class="fa fab fa-bitbucket"></i></i>source-in</li>
+                <li data-set="source-out"> <i class="fa fab fa-bitbucket"></i>source-out</li>
+                <li data-set="source-atop"> <i class="fa fab fa-bitbucket"></i>source-atop</li>
+                <li data-set="destination-over"> <i class="fa fab fa-bitbucket"></i>destination-over</li>
+                <li data-set="destination-out"> <i class="fa fab fa-bitbucket"></i>destination-out</li>
+                <li data-set="destination-atop"> <i class="fa fab fa-bitbucket"></i>destination-atop</li>
+                <li data-set="xor"> <i class="fa fab fa-bitbucket"></i>xor</li>
+                <li data-set="multiply"> <i class="fa fab fa-bitbucket"></i>multiply</li>
+                <li data-set="screen"> <i class="fa fab fa-bitbucket"></i>screen</li>
+                <li data-set="overlay"> <i class="fa fab fa-bitbucket"></i>overlay</li>
+                <li data-set="darken"> <i class="fa fab fa-bitbucket"></i>darken</li>
+                <li data-set="lighten"> <i class="fa fab fa-bitbucket"></i>lighten</li>
+                <li data-set="color-dodge"> <i class="fa fab fa-bitbucket"></i>color-dodge</li>
+                <li data-set="color-burn"> <i class="fa fab fa-bitbucket"></i>color-burn</li>
+                <li data-set="soft-light"> <i class="fa fab fa-bitbucket"></i>soft-light</li>
+                <li data-set="difference"> <i class="fa fab fa-bitbucket"></i>difference</li>
+                <li data-set="exclusion"> <i class="fa fab fa-bitbucket"></i>exclusion</li>
+
+
+            </ul>
+
+        </div>
+
+        <!-- The model for GCO ends  -->
+
+
+        <div class="side-bar">
+            <div class="title">
+                <img src="Group 24.svg">
+            </div>
+
+            <ul class="side-nav">
+
+                <li id="click">Line Join <i class="fa fa-caret-down" id="icon"></i></li>
+                <li id="click2">Line Cap <i class="fa fa-caret-down"></i></li>
+                <li id="click3">Global Composite Operation <i class="fa fa-caret-down"></i></li>
+                <li>Line Width <input type="range" min="1" max="100" value="20" class="slider" id="myRange"><span
+                        id="range"></span></li>
+                <li>Color <input type="color" id="color_picker"><span id="color"></span></li>
+                <li>Auto Adjust Line Width <label class="switch">
+                        <input type="checkbox" id="auto-adjust">
+                        <span class="slider2 round"></span>
+                    </label>
+                </li>
+                <li>Auto Color Adjust <label class="switch">
+                        <input type="checkbox" id="auto-color">
+                        <span class="slider2 round"></span>
+                    </label>
+                </li>
+
+            </ul>
+
+            <div class="sideBar-footer">
+                <div class="footer">
+                    <h4>Follow Creator on:</h4>
+                    <ul class="social-icons">
+                        <li><a class="twitter" href="https://twitter.com/_Mr_Emma"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li><a class="dribbble" href="https://www.behance.net/emmanuelkusi"><i
+                                    class="fab fa-behance"></i></a></li>
+                        <li><a class="linkedin" href="https://www.linkedin.com/in/emmanuel-kusi-b8a6981a6/"><i
+                                    class="fab fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-icon">
+            <i class="fa fa-download"></i>
+        </div>
+
+        <canvas id="canvas" width="1160px" height="740px"></canvas>
+
+
+    </div>
+    </div>
+
+
+<div class="alert-container">
+    <div class="alert">
+        <h1>Screen Resolution Not Supported <i class="fa fa-warning"></i></h1>
+        <p>For a better experience, we recommend that you open the drawing canvas on a larger screen with a width of <b>1200 pixels or more</b>. This will ensure that you have enough space to express your creativity without any limitations. Thank you for your understanding! </p>
+    </div>
+ </div>
+
+
+
+
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
